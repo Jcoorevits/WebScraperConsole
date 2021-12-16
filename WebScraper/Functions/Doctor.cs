@@ -26,7 +26,7 @@ namespace WebScraper.Functions
             //Go to appointment page
             driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[2]/aside/section/div/p[11]/a")).Click();
 
-
+            // Switch to current tab
             driver.SwitchTo().Window(driver.WindowHandles[1]);
             System.Threading.Thread.Sleep(1000);
 
