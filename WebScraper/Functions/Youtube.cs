@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace WebScraper.views
+namespace WebScraper.Functions
 {
     class Youtube
     {
@@ -30,14 +30,17 @@ namespace WebScraper.views
                 .Click();
 
             // User input search term and submit
-            Console.Write("What would u like to search: ");
+            Console.Write("What would you like to search: ");
             var input = Console.ReadLine();
             var findElement = driver.FindElement(By.XPath(
                 "/html/body/ytd-app/div/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/form/div[1]/div[1]/input"));
             findElement.Click();
             findElement.SendKeys(input);
             findElement.Submit();
-
+            
+            // Make CSV template if not exists
+            CsvWriter.FileTemplate("Title,Author,Views", input);
+            
             // filter search term on new video's
             var filters = driver.FindElement(By.XPath(
                 "/html/body/ytd-app/div/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[1]/div[2]/ytd-search-sub-menu-renderer/div[1]/div/ytd-toggle-button-renderer/a/tp-yt-paper-button/yt-formatted-string"));
@@ -59,11 +62,12 @@ namespace WebScraper.views
             // Look for title, author, view
             var songTitles = driver.FindElements(By.CssSelector("#video-title > yt-formatted-string"));
             var songAuthor = driver.FindElements(By.CssSelector("#channel-info"));
-            var songViews = driver.FindElements(By.CssSelector("#metadata-line"));
+            var songViews = driver.FindElements(By.CssSelector("#metadata-line > span:nth-child(1)"));
 
             // Get first 5 objects
             for (int i = 0; i < 5; i++)
             {
+                CsvWriter.YoutubeCsv(songTitles[i].Text, songAuthor[i].Text, songViews[i].Text, input );
                 Console.WriteLine(songTitles[i].Text);
                 Console.WriteLine(songAuthor[i].Text);
                 Console.WriteLine(songViews[i].Text);

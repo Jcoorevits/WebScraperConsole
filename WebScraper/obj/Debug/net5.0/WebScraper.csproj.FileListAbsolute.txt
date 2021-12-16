@@ -17,3 +17,6 @@ C:\CSharp\ConsoleApp\WebScraper\obj\Debug\net5.0\WebScraper.genruntimeconfig.cac
 C:\CSharp\ConsoleApp\WebScraper\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\CSharp\ConsoleApp\WebScraper\bin\Debug\net5.0\WebDriver.dll
 C:\CSharp\ConsoleApp\WebScraper\obj\Debug\net5.0\WebScraper.csproj.CopyComplete
+C:\CSharp\ConsoleApp\WebScraper\bin\Debug\net5.0\FluentEmail.Core.dll
+C:\CSharp\ConsoleApp\WebScraper\bin\Debug\net5.0\FluentEmail.Smtp.dll
+C:\CSharp\ConsoleApp\WebScraper\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
