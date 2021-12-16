@@ -40,10 +40,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "FluentEmail.Smtp": {
-              "target": "Package",
-              "version": "[3.0.0, )"
-            },
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[4.1.0, )"
