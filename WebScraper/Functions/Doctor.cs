@@ -76,9 +76,9 @@ namespace WebScraper.Functions
                 if (appointment == false)
                 {
                     Console.WriteLine("Search was not successful.");
-                    for (int i = 0; i <= 5; i++)
+                    for (int i = 0; i < 5; i++)
                     {
-                        if (i == 5)
+                        if (i == 4)
                         {
                             Console.WriteLine("Retrying in " + (5 - i) + " minute.");
                             System.Threading.Thread.Sleep(60000);
@@ -90,6 +90,7 @@ namespace WebScraper.Functions
                         }
                         
                     }
+                    Console.WriteLine("Retrying now.");
 
                     driver.Navigate().Refresh();
                     System.Threading.Thread.Sleep(2000);
