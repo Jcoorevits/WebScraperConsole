@@ -31,9 +31,9 @@ namespace WebScraper.Functions
             System.Threading.Thread.Sleep(1000);
 
             // Example next page
-            driver.FindElement(
+            /*driver.FindElement(
                 By.XPath("/html/body/div[1]/div[4]/div[1]/div/div/div[2]/div/div[1]/div[2]/div[1]/button[3]")).Click();
-            System.Threading.Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(1000);*/
 
 
             var date = driver.FindElement(By.XPath(
@@ -93,10 +93,6 @@ namespace WebScraper.Functions
 
                     driver.Navigate().Refresh();
                     System.Threading.Thread.Sleep(2000);
-                    //Example page
-                    /*driver.FindElement(
-                        By.XPath("/html/body/div[1]/div[4]/div[1]/div/div/div[2]/div/div[1]/div[2]/div[1]/button[3]")).Click();
-                    System.Threading.Thread.Sleep(1000);*/
                 }
                 else
                 {
