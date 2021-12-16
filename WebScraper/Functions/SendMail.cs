@@ -2,8 +2,6 @@
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
-using FluentEmail.Core;
-using FluentEmail.Smtp;
 
 namespace WebScraper.Functions
 {
