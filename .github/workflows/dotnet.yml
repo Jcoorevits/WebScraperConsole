@@ -25,7 +25,7 @@ jobs:
       run: dotnet test --no-build --verbosity normal
 
     - name: Tar files
-      run: tar -cvf my_files.tar .
+      run: tar -cvf my_files.tar ./WebScraper/bin/Debug/net5.0/
 
 
 
