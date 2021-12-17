@@ -32,12 +32,11 @@ jobs:
       run: cp ./WebScraper/bin/Debug/net5.0/chromedriver.exe ./newArchive
     - name : cp webscraper
       run: cp /home/runner/work/WebScraperConsole/WebScraperConsole/WebScraper/bin/Release/net5.0/win10-x64/publish/**.exe ./newArchive
-    - name: Tar files
-      run: tar -cf my_files.tar ./newArchive
+    
 
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
         name: my-artifact
-        path: my_files.tar
+        path: ./newArchive
