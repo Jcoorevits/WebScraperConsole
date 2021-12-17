@@ -23,11 +23,9 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - name: Publish
-      run: dotnet publish -r win-x64 -c Release --self-contained false
 
     - name: Tar files
-      run: tar -cvf my_files.tar /home/runner/work/WebScraperConsole/WebScraperConsole/WebScraper/bin/Release/net5.0/win-x64/
+      run: tar -cvf my_files.tar .
 
 
 
