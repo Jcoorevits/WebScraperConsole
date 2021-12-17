@@ -28,7 +28,9 @@ jobs:
 
     - name: Tar files
       run: tar -cf my_files.tar -T /newArchive
+    - name: Tar files webdriver
       run: tar -rf my_files.tar ./WebScraper/bin/Debug/net5.0/webdriver.exe
+    - name: Tar files webscraper  
       run: tar -rf my_files.tar /home/runner/work/WebScraperConsole/WebScraperConsole/WebScraper/bin/Release/net5.0/win10-x64/publish/**.exe
 
 
