@@ -24,10 +24,10 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish -c Release --self-contained false
+      run: dotnet publish -r win-x64 -c Release --self-contained false
 
     - name: Upload WebScraper Build Artifact
       uses: actions/upload-artifact@v2
       with:
         name: WebScraper
-        path: /home/runner/work/WebScraperConsole/WebScraperConsole/WebScraper/bin/Release/net5.0/publish/
+        path: /home/runner/work/WebScraperConsole/WebScraperConsole/WebScraper/bin/Release/net5.0/win-x64/publish/
