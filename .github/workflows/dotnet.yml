@@ -30,4 +30,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: WebScraper
-        path: /home/runner/work/WebScraperConsole/WebScraperConsole/WebScraper/bin/Release/net5.0/publish/
+        path: /home/runner/work/WebScraperConsole/WebScraperConsole/WebScraper/bin/Release/net5.0/win-x64/publish/
