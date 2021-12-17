@@ -25,15 +25,15 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: Publish
       run: dotnet publish -c Release -r win10-x64 -p:PublishSingleFile=true --self-contained false
+
     - name: Create dir
       run: mkdir ./newArchive
+    - name : cp chromedriver
+      run: cp ./WebScraper/bin/Debug/net5.0/chromedriver.exe ./newArchive
+    - name : cp webscraper
+      run: cp /home/runner/work/WebScraperConsole/WebScraperConsole/WebScraper/bin/Release/net5.0/win10-x64/publish/**.exe ./newArchive
     - name: Tar files
       run: tar -cf my_files.tar ./newArchive
-    - name: Tar files webdriver
-      run: tar -rf my_files.tar ./WebScraper/bin/Debug/net5.0/
-    - name: Tar files webscraper  
-      run: tar -rf my_files.tar /home/runner/work/WebScraperConsole/WebScraperConsole/WebScraper/bin/Release/net5.0/win10-x64/publish/**.exe
-
 
 
     - name: Upload Artifact
