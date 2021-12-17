@@ -3,7 +3,4 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
-  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)selenium.webdriver.chromedriver\97.0.4692.3600-beta\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('$(NuGetPackageRoot)selenium.webdriver.chromedriver\97.0.4692.3600-beta\build\Selenium.WebDriver.ChromeDriver.targets')" />
-  </ImportGroup>
 </Project>

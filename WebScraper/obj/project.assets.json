@@ -22,12 +22,6 @@
         "runtime": {
           "lib/net5.0/WebDriver.dll": {}
         }
-      },
-      "Selenium.WebDriver.ChromeDriver/97.0.4692.3600-beta": {
-        "type": "package",
-        "build": {
-          "build/Selenium.WebDriver.ChromeDriver.targets": {}
-        }
       }
     },
     "net5.0/win-x64": {
@@ -50,12 +44,6 @@
         },
         "runtime": {
           "lib/net5.0/WebDriver.dll": {}
-        }
-      },
-      "Selenium.WebDriver.ChromeDriver/97.0.4692.3600-beta": {
-        "type": "package",
-        "build": {
-          "build/Selenium.WebDriver.ChromeDriver.targets": {}
         }
       }
     }
@@ -110,30 +98,11 @@
         "selenium.webdriver.4.1.0.nupkg.sha512",
         "selenium.webdriver.nuspec"
       ]
-    },
-    "Selenium.WebDriver.ChromeDriver/97.0.4692.3600-beta": {
-      "sha512": "teSQ2gRfuiZfJ1Q+Kqlfk0z10RliTA6fU7a3rCV3XLcQ1GppRqOXK3g/jq0SmGilSoAVYz7jXEmZUeMCtMKAjA==",
-      "type": "package",
-      "path": "selenium.webdriver.chromedriver/97.0.4692.3600-beta",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "build/DefinePropertiesChromeDriver.targets",
-        "build/Selenium.WebDriver.ChromeDriver.targets",
-        "driver/linux64/chromedriver",
-        "driver/mac64/chromedriver",
-        "driver/win32/chromedriver.exe",
-        "nupkg-icon.png",
-        "selenium.webdriver.chromedriver.97.0.4692.3600-beta.nupkg.sha512",
-        "selenium.webdriver.chromedriver.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Selenium.WebDriver >= 4.1.0",
-      "Selenium.WebDriver.ChromeDriver >= 97.0.4692.3600-beta"
+      "Selenium.WebDriver >= 4.1.0"
     ]
   },
   "packageFolders": {
@@ -178,10 +147,6 @@
           "Selenium.WebDriver": {
             "target": "Package",
             "version": "[4.1.0, )"
-          },
-          "Selenium.WebDriver.ChromeDriver": {
-            "target": "Package",
-            "version": "[97.0.4692.3600-beta, )"
           }
         },
         "imports": [

@@ -10,7 +10,6 @@
       "WebScraper/1.0.0": {
         "dependencies": {
           "Selenium.WebDriver": "4.1.0",
-          "Selenium.WebDriver.ChromeDriver": "97.0.4692.3600-beta",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "5.0.12"
         },
         "runtime": {
@@ -862,8 +861,7 @@
             "fileVersion": "4.0.0.0"
           }
         }
-      },
-      "Selenium.WebDriver.ChromeDriver/97.0.4692.3600-beta": {}
+      }
     }
   },
   "libraries": {
@@ -890,13 +888,6 @@
       "sha512": "sha512-d4smisz4a/wJCM2TzkKTl+BLfvZUTvaobhKElDfCVZlvY8ThsC8VAoBNWTlg1H/GGzIP//yVGko/W0FILTgkYA==",
       "path": "selenium.webdriver/4.1.0",
       "hashPath": "selenium.webdriver.4.1.0.nupkg.sha512"
-    },
-    "Selenium.WebDriver.ChromeDriver/97.0.4692.3600-beta": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-teSQ2gRfuiZfJ1Q+Kqlfk0z10RliTA6fU7a3rCV3XLcQ1GppRqOXK3g/jq0SmGilSoAVYz7jXEmZUeMCtMKAjA==",
-      "path": "selenium.webdriver.chromedriver/97.0.4692.3600-beta",
-      "hashPath": "selenium.webdriver.chromedriver.97.0.4692.3600-beta.nupkg.sha512"
     }
   },
   "runtimes": {
