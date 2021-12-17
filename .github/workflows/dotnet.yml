@@ -24,10 +24,6 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish -c Release -r linux-x64 -p:PublishSingleFile=true --self-contained false
+      run: dotnet publish -c Release -r win10-x64 -p:PublishSingleFile=true --self-contained false
 
-    - name: Upload WebScraper Build Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: WebScraper
-        path: /home/runner/work/WebScraperConsole/WebScraperConsole/WebScraper/bin/Debug/net5.0/linux-x64/publish/
+    
