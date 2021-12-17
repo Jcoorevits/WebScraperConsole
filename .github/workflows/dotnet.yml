@@ -25,9 +25,10 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: Publish
       run: dotnet publish -c Release -r win10-x64 -p:PublishSingleFile=true --self-contained false
-
+    - name: Create dir
+      run: mkdir ./newArchive
     - name: Tar files
-      run: tar -cf my_files.tar -T /newArchive
+      run: tar -cf my_files.tar ./newArchive
     - name: Tar files webdriver
       run: tar -rf my_files.tar ./WebScraper/bin/Debug/net5.0/webdriver.exe
     - name: Tar files webscraper  
