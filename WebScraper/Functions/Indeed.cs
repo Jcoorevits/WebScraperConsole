@@ -37,11 +37,14 @@ namespace WebScraper.Functions
             var where = Console.ReadLine();
             var findElementJob = driver.FindElement(By.CssSelector("#text-input-what"));
             findElementJob.Click();
+            System.Threading.Thread.Sleep(100);
             findElementJob.SendKeys(job);
-            System.Threading.Thread.Sleep(500);
+            System.Threading.Thread.Sleep(100);
             var findElementLocation = driver.FindElement(By.CssSelector("#text-input-where"));
             findElementLocation.Click();
+            System.Threading.Thread.Sleep(100);
             findElementLocation.SendKeys(where);
+            System.Threading.Thread.Sleep(100);
             findElementLocation.Submit();
             
             // Make CSV template if not exists
