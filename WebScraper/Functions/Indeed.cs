@@ -38,6 +38,7 @@ namespace WebScraper.Functions
             var findElementJob = driver.FindElement(By.CssSelector("#text-input-what"));
             findElementJob.Click();
             findElementJob.SendKeys(job);
+            System.Threading.Thread.Sleep(500);
             var findElementLocation = driver.FindElement(By.CssSelector("#text-input-where"));
             findElementLocation.Click();
             findElementLocation.SendKeys(where);
