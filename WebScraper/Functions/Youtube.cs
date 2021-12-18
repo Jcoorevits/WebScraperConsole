@@ -72,6 +72,7 @@ namespace WebScraper.Functions
                 Console.WriteLine(songAuthor[i].Text);
                 Console.WriteLine(songViews[i].Text);
             }
+            driver.Quit();
         }
     }
 }

@@ -41,7 +41,6 @@ namespace WebScraper.Functions
             Console.WriteLine("Searching for appointment between " + date.Text);
 
             var appointment = false;
-
             while (appointment == false)
             {
                 var time = driver.FindElements(By.XPath(
@@ -60,7 +59,6 @@ namespace WebScraper.Functions
                     {
                         dayCounter++;
                     }
-
                     if (occupation[i].Text.Contains("Afspraak (geen infectie)"))
                     {
                         string available = days[dayCounter].Text + " " + time[i].GetAttribute("data-start") + " " +
@@ -72,7 +70,6 @@ namespace WebScraper.Functions
                         break;
                     }
                 }
-
                 if (appointment == false)
                 {
                     Console.WriteLine("Search was not successful.");
@@ -88,7 +85,6 @@ namespace WebScraper.Functions
                             Console.WriteLine("Retrying in " + (5 - i) + " minutes.");
                             System.Threading.Thread.Sleep(60000);
                         }
-                        
                     }
                     Console.WriteLine("Retrying now.");
 
@@ -98,6 +94,7 @@ namespace WebScraper.Functions
                 else
                 {
                     Console.WriteLine("Search was successful, an e-mail has been sent");
+                    driver.Quit();
                 }
             }
         }

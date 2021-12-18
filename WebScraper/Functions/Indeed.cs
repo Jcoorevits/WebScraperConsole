@@ -68,6 +68,7 @@ namespace WebScraper.Functions
                 CsvWriter.IndeedCsv(title[i].Text, company[i].Text, location[i].Text, link[i].GetAttribute("href") ,job+where);
                 Console.WriteLine(link[i].GetAttribute("href"));
             }
+            driver.Quit();
         }
     }
 }

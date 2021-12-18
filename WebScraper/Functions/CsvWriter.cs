@@ -10,17 +10,22 @@ namespace WebScraper.Functions
         {
             // Specify the directory you want to manipulate.
             string path = @"c:\webScraperInfo";
-            
+
             // Determine whether the directory exists.
             if (Directory.Exists(path))
             {
+                filePath = "C:\\\\webScraperInfo\\" + filePath + ".txt";
+                if (File.Exists(filePath)) return;
+                using StreamWriter csv = File.CreateText(filePath);
+                csv.WriteLine(fileTemplate);
+                csv.Close();
                 return;
             }
 
             // Try to create the directory.
             DirectoryInfo di = Directory.CreateDirectory(path);
-            
-            
+
+
             filePath = "C:\\\\webScraperInfo\\" + filePath + ".txt";
             if (File.Exists(filePath)) return;
             using StreamWriter file = File.CreateText(filePath);
